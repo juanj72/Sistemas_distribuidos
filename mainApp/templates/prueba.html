@@ -1,0 +1,63 @@
+
+
+<form  action ='/guardar_ppl/'  method='post'>
+{% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">nui</label>
+    <input type="text" name="nui" class="form-control" id="exampleInputEmail1" >
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">ntd</label>
+    <input type="text" name="n_td" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">documenti</label>
+    <input type="text" name="documento" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">situacion</label>
+    <input type="text" name="situacion_juridica" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">nombre</label>
+    <input type="text" name="nombre" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">apellido</label>
+    <input type="text" name="apellido" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">ubicacion</label>
+    <input type="text" name="ubicacion" class="form-control" id="exampleInputPassword1">
+  </div>
+
+<div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">fecha naci</label>
+    <input type="date" name="fecha_nacimiento" class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">fecha cap</label>
+    <input type="date" name="fecha_captura"  class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">delito</label>
+    <input type="text" name="delito"  class="form-control" id="exampleInputPassword1">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">genero</label>
+    <input type="text" name="genero"  class="form-control" id="exampleInputPassword1">
+  </div>
+
+
+  
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
