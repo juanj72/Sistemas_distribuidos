@@ -280,8 +280,10 @@
                                         <td>{{tramite.observaciones}}</td>
                                         <td>{{tramite.id_estadotramite}}</td>
                                          <td class="d-flex">
-                                            <a  class="btn btn-info" href="">Cambiar estado</a>
-                                            <a  class="btn btn-danger" href="">Delete</a>
+                                            <a href="#" data-target="#myModalCambio" data-toggle="modal" class="identifyingClass" data-id="{{tramite.id}}">Cambiar Estado</a>
+                                               
+                                                    
+                                            <a  class="btn btn-danger" href="{%url 'eliminarreden' %}?id={{tramite.id}}">Delete</a>
                                         </td>
                                         
                                     </tr>

@@ -18,13 +18,38 @@ def cambiarestado(request):
 
     return redirect('libertades')
 
-def capturar(request):
-    id = request.GET['ide']
-    print(id)
-    
+
+def eliminar(request):
+    id = request.GET['id']
+    eli = PPLxTramites.objects.filter(id=id).delete()
+    print(eli)
     
 
-    return (id)
+    return redirect('libertades')
+
+def eliminar72(request):
+    id = request.GET['id']
+    eli = PPLxTramites.objects.filter(id=id).delete()
+    print(eli)
+    
+
+    return redirect('72h')
+
+def eliminarreden(request):
+    id = request.GET['id']
+    eli = PPLxTramites.objects.filter(id=id).delete()
+    print(eli)
+    
+
+    return redirect('redenciones')
+
+def eliminartutela(request):
+    id = request.GET['id']
+    eli = PPLxTramites.objects.filter(id=id).delete()
+    print(eli)
+    
+
+    return redirect('tutelas')
 
 def mostrarppls():
     ppls= PPL.objects.all()
