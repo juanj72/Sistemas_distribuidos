@@ -283,10 +283,7 @@
                                 <thead class="">
                                     <tr class="text">
                                         <th>ID</th>
-                                        <th>NUI</th>
-                                        <th>NTD</th>   
-                                        <th>NOMBRE</th>
-                                        <th>APELLIDO</th>
+                                        <th>PPL</th>
                                         <th>FECHA</th>
                                         <th>RADICADO</th>
                                         <th>ASUNTO</th>
@@ -302,9 +299,6 @@
                                 {%for tramite in tramites%}
                                     <tr class="text-center">
                                         <td>{{tramite.id}}</td>
-                                        <td>{{tramite.id_ppl}}</td>
-                                        <td>{{tramite.id_ppl}}</td>   
-                                        <td>{{tramite.id_ppl}}</td>
                                         <td>{{tramite.id_ppl}}</td>
                                         <td>{{tramite.fecha_peticion}}</td>
                                         <td>{{tramite.radi_oficio_libertades}}</td>
@@ -352,10 +346,7 @@
                             <thead class="">
                                 <tr class="text">
                                     <th>ID</th>
-                                    <th>NUI</th>
-                                    <th>NTD</th>   
-                                    <th>NOMBRE</th>
-                                    <th>APELLIDO</th>
+                                    <th>PPL</th>
                                     <th>FECHA</th>
                                     <th>RADICADO</th>
                                     <th>ASUNTO</th>
@@ -371,18 +362,16 @@
                             
                             {%for tramite in tramites%}
                                 <tr class="text-center">
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>   
+                                    <td>{{tramite.id}}</td>
+                                    <td>{{tramite.id_ppl}}</td>
+                                    <td>{{tramite.fecha_peticion}}</td>
+                                    <td>{{tramite.radi_oficio_libertades}}</td>
+                                    <td>{{tramite.asunto_tutela}}</td>
+                                    <td>{{tramite.oficio_envio_tutela}}</td>
+                                    <td>{{tramite.id_funcionario}}</td>
+                                    <td>{{tramite.observa_desa_tutela}}</td> 
+                                    <td>{{tramite.created_at}}</td>
+                                    <td>{{tramite.update_at}}</td> 
                                     
                                     
                                     

@@ -22,7 +22,7 @@ class PPL(models.Model):
         verbose_name_plural = "PPLS"
     
     def __str__(self):
-        return f"{self.nombre, self.apellido}- nui: {self.nui}"
+        return f"{self.nombre, self.apellido}- nui: {self.nui} - N.TD: {self.n_td}- Ubi: {self.ubicacion}"
 class Area(models.Model):
     nombre_area = models.CharField(max_length=50)
     descripcion_area = models.CharField(max_length=200)

@@ -9,7 +9,22 @@ from django.views.generic import ListView
 
 # Create your views here.
 
+def cambiarestado(request):
+    id = request.GET['id']
+    print(id)
+    h = PPLxTramites.objects.filter(id=id).update(id_estadotramite=id)
+    print(h)
+    
 
+    return redirect('libertades')
+
+def capturar(request):
+    id = request.GET['ide']
+    print(id)
+    
+    
+
+    return (id)
 
 def mostrarppls():
     ppls= PPL.objects.all()

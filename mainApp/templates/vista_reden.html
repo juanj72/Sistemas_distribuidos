@@ -260,10 +260,7 @@
                                 <thead class="">
                                     <tr class="text">
                                         <th>ID</th>
-                                        <th>NUI</th>
-                                        <th>NTD</th>   
-                                        <th>NOMBRE</th>
-                                        <th>APELLIDO</th>
+                                        <th>PPL</th>
                                         <th>FECHA PETICIÓN</th>
                                         <th>FECHA JUZGADO</th>
                                         <th>OBSERVACIONES</th>
@@ -277,9 +274,6 @@
                                 {%for tramite in tramites%}
                                     <tr class="text-center">
                                         <td>{{tramite.id}}</td>
-                                        <td>{{tramite.id_ppl}}</td>
-                                        <td>{{tramite.id_ppl}}</td>   
-                                        <td>{{tramite.id_ppl}}</td>   
                                         <td>{{tramite.id_ppl}}</td>
                                         <td>{{tramite.fecha_peticion}}</td>
                                         <td>{{tramite.fecha_envio_tramite}}</td>
@@ -320,14 +314,12 @@
                             <thead class="">
                                 <tr class="text">
                                     <th>ID</th>
-                                    <th>NUI</th>
-                                    <th>NTD</th>   
-                                    <th>NOMBRE</th>
-                                    <th>APELLIDO</th>
+                                    <th>PPL</th>
                                     <th>FECHA PETICIÓN</th>
                                     <th>FECHA JUZGADO</th>
                                     <th>FUNCIONARIO</th>
                                     <th>OBSERVACIONES</th>
+                                    <th>ESTADO</th>
                                     <th>REGISTRO REALIZADO</th>
                                     <th>ULTIMA ACTUALIZACIÓN</th>
                                     
@@ -335,23 +327,21 @@
                             </thead>
                         <tbody>
                             
-                            <c:forEach var="prov" items="">
+                            {%for tramite in tramites%}
                                 <tr class="text-center">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>   
-                                    <td></td>
-                                    <td></td>   
-                                    <td></td>   
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>   
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{tramite.id}}</td>
+                                    <td>{{tramite.id_ppl}}</td>
+                                    <td>{{tramite.fecha_peticion}}</td>   
+                                    <td>{{tramite.fecha_envio_tramite}}</td>
+                                    <td>{{tramite.id_funcionario}}</td>   
+                                    <td>{{tramite.observaciones}}</td>   
+                                    <td>{{tramite.id_estadotramite}}</td>
+                                    <td>{{tramite.created_at}}</td>
+                                    <td>{{tramite.update_at}}</td>
                                     
                                     
                                 </tr>
-                            </c:forEach>                           
+                            {%endfor%}                             
                         </tbody>
                     </table>
 

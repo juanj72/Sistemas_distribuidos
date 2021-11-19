@@ -287,13 +287,13 @@
                                 {%for prestamo in prestamos%}
                                 <tr class="text-center">
                                     <td>{{prestamo.id}}</td>
-                                    <td>{{prestamo.id_ppl_id}}</td>
-                                    <td>{{prestamo.id_funcionario_id}}</td>   
+                                    <td>{{prestamo.id_ppl}}</td>
+                                    <td>{{prestamo.id_funcionario}}</td>   
                                     <td>{{prestamo.descripcion}}</td>   
                                     <td>{{prestamo.fecha_prestamo}}</td>
                                     <td>{{prestamo.fecha_devolucion}}</td>
                                     <td class="d-flex">
-                                        <a class="btn btn-warning"   href="{%url 'devolucion' %}?id={{prestamo.id}}">Confirmar</a>
+                                        <a class="btn btn-warning"   href="{%url 'devolucion' %}?ide={{prestamo.id}}">Confirmar</a>
                                         
                                     </td>
                                 </tr>
@@ -339,8 +339,8 @@
                                 {%for prestamo in prestamos%}
                                     <tr class="text-center">
                                         <td>{{prestamo.id}}</td>
-                                        <td>{{prestamo.id_ppl_id}}</td>
-                                        <td>{{prestamo.id_funcionario_id}}</td>   
+                                        <td>{{prestamo.id_ppl}}</td>
+                                        <td>{{prestamo.id_funcionario}}</td>   
                                         <td>{{prestamo.descripcion}}</td>   
                                         <td>{{prestamo.fecha_prestamo}}</td>
                                         <td>{{prestamo.fecha_devolucion}}</td>

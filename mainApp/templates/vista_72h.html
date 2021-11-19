@@ -285,16 +285,14 @@
                                 <thead class="">
                                     <tr class="text">
                                         <th>ID</th>
-                                        <th>NUI</th>
-                                        <th>NTD</th>   
-                                        <th>NOMBRE</th>
-                                        <th>APELLIDO</th>
+                                        <th>PPL</th>
                                         <th>FECHA PETICIÓN</th>
                                         <th>FASE</th>
                                         <th>VISITA DOMICILIARIA</th>
                                         <th>ANTECEDENTES</th>
                                         <th>FECHA JUZGADO</th>
                                         <th>OBSERVACIONES</th>
+                                        <th>ESTADO</th>
                                         <th>ACCIONES</th>
                                         
                                     </tr>
@@ -305,15 +303,13 @@
                                     <tr class="text-center">
                                         <td>{{tramite.id}}</td>
                                         <td>{{tramite.id_ppl}}</td>
-                                        <td>{{tramite.id_ppl}}</td>   
-                                        <td>{{tramite.id_ppl}}</td>   
-                                        <td>{{tramite.id_ppl}}</td>
                                         <td>{{tramite.fecha_peticion}}</td>
                                         <td>{{tramite.fase_72h}}</td>
                                         <td>{{tramite.visitadomi_72h}}</td>
                                         <td>{{tramite.antecedentes_72h}}</td>
                                         <td>{{tramite.fecha_envio_tramite}}</td>
                                         <td>{{tramite.observaciones}}</td>
+                                        <td>{{tramite.id_estadotramite}}</td>
                                          <td class="d-flex">
                                             <a  class="btn btn-warning" href="">Editar</a>
                                             <a  class="btn btn-danger" href="">Delete</a>
@@ -349,10 +345,7 @@
                             <thead class="">
                                 <tr class="text">
                                     <th>ID</th>
-                                    <th>NUI</th>
-                                    <th>NTD</th>   
-                                    <th>NOMBRE</th>
-                                    <th>APELLIDO</th>
+                                    <th>PPL</th>
                                     <th>FECHA PETICIÓN</th>
                                     <th>FASE</th>
                                     <th>VISITA DOMICILIARIA</th>
@@ -360,6 +353,7 @@
                                     <th>FECHA JUZGADO</th>
                                     <th>FUNCIONARIO</th>
                                     <th>OBSERVACIONES</th>
+                                    <th>ESTADO</th>
                                     <th>REGISTRO REALIZADO</th>
                                     <th>ULTIMA ACTUALIZACIÓN</th>
                                     
@@ -367,27 +361,25 @@
                             </thead>
                         <tbody>
                             
-                            <c:forEach var="prov" items="">
+                            {%for tramite in tramites%}
                                 <tr class="text-center">
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>   
-                                    <td>Prueba</td>
+                                    <td>{{tramite.id}}</td>
+                                    <td>{{tramite.id_ppl}}</td>
+                                    <td>{{tramite.fecha_peticion}}</td>
+                                    <td>{{tramite.fase_72h}}</td>
+                                    <td>{{tramite.visitadomi_72h}}</td>   
+                                    <td>{{tramite.antecedentes_72h}}</td>   
+                                    <td>{{tramite.fecha_envio_tramite}}</td>
+                                    <td>{{tramite.id_funcionario}}</td>
+                                    <td>{{tramite.observaciones}}</td>
+                                    <td>{{tramite.id_estadotramite}}</td>   
+                                    <td>{{tramite.created_at}}</td>   
+                                    <td>{{tramite.update_at}}</td>
                                     
                                     
                                     
                                 </tr>
-                            </c:forEach>                           
+                            {% endfor %}                             
                         </tbody>
                     </table>
 
