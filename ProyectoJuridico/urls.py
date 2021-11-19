@@ -38,8 +38,8 @@ urlpatterns = [
     path('guardar_tramitere72h/', views.guardar_tramitere72h, name ='guardar_tramitere72h'),
     path('guardar_tramitetutela/', views.guardar_tramitetutela, name ='guardar_tramitetutela'),
     path('guardar_tramitepreshv/', views.guardar_tramitepreshv, name ='guardar_tramitepreshv'),
-    path('guardar_tramitepreshv/', views.guardar_tramitepreshv, name ='guardar_tramitepreshv'),
-    path('asesor/', views.asesorl, name ='asesor'),
+    path('devolucion/', views.devolucion, name ='devolucion'),
+    path('asesor/', views.buscarx, name ='asesor'),
     path('',LoginView.as_view(template_name='index.html'),name='login')
     
 

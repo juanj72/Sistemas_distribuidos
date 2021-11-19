@@ -3,6 +3,8 @@ from django.shortcuts import redirect, render, HttpResponse
 from mainApp.models import *
 from django.contrib import messages
 from datetime import date
+from django.db.models import Q
+from django.views.generic import ListView
 
 
 # Create your views here.
@@ -74,6 +76,34 @@ def devolucion(request):
 
     ###### FIN TRAMITES DE PRESTAMO HV ##########
 
+def buscarx(request):
+    busqueda = request.GET.get("buscar")
+    tramites = PPLxTramites.objects.all()
+
+    if busqueda:
+        tramites = PPLxTramites.objects.filter(
+            Q(id_ppl__nombre__icontains = busqueda)|
+            Q(id_ppl__nui__icontains = busqueda)|
+            Q(id_funcionario__nombre_funci__icontains = busqueda)|
+            Q(id_tipotramite__nombre_tipo__icontains = busqueda)|
+            Q(id_estadotramite__estado_tramite__icontains = busqueda)|
+            Q(fecha_peticion__contains = busqueda)|
+            Q(fase_72h__contains = busqueda)|
+            Q(visitadomi_72h__contains = busqueda)|
+            Q(antecedentes_72h__contains = busqueda)|
+            Q(radi_oficio_libertades__contains = busqueda)|
+            Q(autoridad_tutela__contains = busqueda)|
+            Q(asunto_tutela__contains = busqueda)|
+            Q(oficio_envio_tutela__contains = busqueda)|
+            Q(observa_desa_tutela__contains = busqueda)|
+            Q(observaciones__contains = busqueda)|
+            Q(fecha_envio_tramite__contains = busqueda)
+            
+        ).distinct()
+        
+    
+
+    return render(request, 'vista_asesor.html', {'tramites': tramites})
 
 
 
@@ -298,20 +328,6 @@ def mostrarprestamos():
 
     return(prestamos)
 
-def asesorl(request):
-    ppls = mostrarppls()
-    tramites = mostrarpplsxtramites()
-    estados = mostrarestados()
-    
-
-    return render(request, "vista_asesor.html",{
-        
-        'tramites'       :tramites,
-        'estados'        : estados,
-        'ppls'           : ppls,
-        
-
-    })
 
 def mostrarxtramitesliber():
 
@@ -433,8 +449,7 @@ def encontrar_estado(estado):
 def index(request):
     return render(request, "index.html")
 
-def asesor(request):
-    return render(request, "vista_asesor.html")
+
 
 def prueba(request):
     return render(request, "prueba.html")

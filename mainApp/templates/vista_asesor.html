@@ -82,6 +82,18 @@
 
 
           <div class="container">
+
+          <form  data-sb-form-api-token="API_TOKEN" method="get">
+                               
+                               <label></label>
+                                 <input  name= "buscar" type="text" placeholder="Buscar registro*" value="{{request.GET.buscar}}"/>
+
+                            <button class="btn btn-info " data-bs-dismiss="" type="submit">
+                                        <i class="fas fa-search me-1"></i>
+                                       
+                            </button>
+            
+            </form>
           <h2 class="section-heading text-center">REGISTROS DE TRAMITES</h2>
           <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                     
