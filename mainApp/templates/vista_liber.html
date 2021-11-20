@@ -302,7 +302,7 @@
                                         <td>{{tramite.observaciones}}</td>
                                         <th>{{tramite.id_estadotramite}}</th>
                                          <td class="d-flex">
-                                            <a href="#" data-target="#myModalCambio" data-toggle="modal" class="identifyingClass" data-id="{{tramite.id}}">Cambiar Estado</a>
+                                            <<a href="{%url 'pruebapepe' %}?id={{tramite.id}}">  Cambiar Estado</a>
                                                
                                                     
                                             <a  class="btn btn-danger" href="{%url 'eliminar' %}?id={{tramite.id}}">Delete</a>
@@ -351,6 +351,8 @@
                                 <form  action="/cambiar_estado/" data-sb-form-api-token="API_TOKEN" method="get">
 
                                     <label>Codigo de tramite:</label>
+                                    <label></label>
+                                    
                                     
                                     <input type="hidden" name="hiddenValue" id="hiddenValue" value="" />
                                    

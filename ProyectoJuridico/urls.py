@@ -45,7 +45,9 @@ urlpatterns = [
     path('eliminarreden/', views.eliminarreden, name ='eliminarreden'),
     path('eliminartutela/', views.eliminartutela, name ='eliminartutela'),
     path('devolucion/', views.devolucion, name ='devolucion'),
-    path('',LoginView.as_view(template_name='index.html'),name='login')
+    path('pruebapepe/', views.pruebapepe, name ='pruebapepe'),
+    path('',LoginView.as_view(template_name='index.html'),name='login'),
+    path('prueba/',views.pruebapepe,name='pepe')
     
 
     

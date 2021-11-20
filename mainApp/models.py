@@ -105,7 +105,7 @@ class PPLxTramites(models.Model):
     update_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.id_funcionario, self.id_ppl,self.id_tipotramite,self.id_estadotramite}"
+       return f"{self.id_funcionario, self.id_ppl,self.id_tipotramite,self.id_estadotramite}"
 
 
 

@@ -397,6 +397,20 @@ def libertades(request):
 
 
 
+def pruebapepe(request):
+
+
+    id = request.GET['id']
+ 
+    print(id)
+    
+
+    return redirect('libertades')
+   
+
+
+
+
 
 def guardar_tramiteliber(request):
 
