@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'appdjangoinpec'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_371C630F649B43FFB4B1C72C2A5A0B42 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F143252551A8479D8E5FDC0441DC689F }}
