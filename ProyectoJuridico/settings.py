@@ -16,9 +16,9 @@ from django.urls import reverse_lazy
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-STATICFILES_DIRS=(
-    os.path.join(BASE_DIR,'static'),
-)
+#STATICFILES_DIRS=(
+ #   os.path.join(BASE_DIR,'static'),
+#)
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +30,7 @@ SECRET_KEY = 'ziza53+6_ijw3dl3angb@5&(o&h0(mri+%azk7-bh8vl-sok27'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['inpecgestorintento57.azurewebsites.net']
+ALLOWED_HOSTS = ['prueba61.azurewebsites.net']
 
 
 # Application definition
