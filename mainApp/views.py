@@ -5,10 +5,12 @@ from django.contrib import messages
 from datetime import date
 from django.db.models import Q
 from django.views.generic import ListView
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_protect
 
 
 # Create your views here.
-
+@csrf_protect
 def cambiarestado(request):
     id = request.GET['id']
     print(id)
@@ -18,7 +20,7 @@ def cambiarestado(request):
 
     return redirect('libertades')
 
-
+@csrf_protect
 def eliminar(request):
     id = request.GET['id']
     eli = PPLxTramites.objects.filter(id=id).delete()
@@ -26,7 +28,7 @@ def eliminar(request):
     
 
     return redirect('libertades')
-
+@csrf_protect
 def eliminar72(request):
     id = request.GET['id']
     eli = PPLxTramites.objects.filter(id=id).delete()
@@ -34,7 +36,7 @@ def eliminar72(request):
     
 
     return redirect('72h')
-
+@csrf_protect
 def eliminarreden(request):
     id = request.GET['id']
     eli = PPLxTramites.objects.filter(id=id).delete()
@@ -198,7 +200,7 @@ def mostrarxtramitestute():
    tute = PPLxTramites.objects.filter(id_tipotramite_id=4)
 
    return(tute)
-
+@csrf_protect
 def tutelas(request):
     ppls = mostrarppls()
     tramites = mostrarxtramitestute()
